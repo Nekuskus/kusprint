@@ -3,5 +3,7 @@ name = "kusprint"
 version = "1.0.0"
 edition = "2021"
 license = "MIT"
+repository = "https://github.com/Nekuskus/kusprint"
+description = "A set of macros for printing objects to stdout without having to specify a template literal."
 
 [lib]
