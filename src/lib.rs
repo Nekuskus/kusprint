@@ -78,8 +78,8 @@ macro_rules! label_println {
     };
 
     ($e:expr, $($es:expr),+) => {{
-        label_println! { $e }
-        label_println! { $($es),+ }
+        label_print! { $e }
+        label_print! { $($es),+ }
         println!()
     }};
 }
@@ -87,11 +87,12 @@ macro_rules! label_println {
 #[macro_export]
 macro_rules! label_println_delim {
     ($delim:expr, $e:expr, $($es:expr),+) => {{
-        label_println! { $e }
+        label_print! { $e }
         $(
             print!($delim);
-            label_println! { $es }
+            label_print! { $es }
         )*
+        println!();
     }};
 }
 
